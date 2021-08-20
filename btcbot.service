@@ -1,0 +1,14 @@
+[Unit]
+Description=Telegram Bot
+After=network.target
+
+[Service]
+User=stuffer
+Group=stuffer
+
+WorkingDirectory=/home/stuffer/BTC_bot/
+Environment="PYTHONPATH=/home/stuffer/BTC_bot/"
+ExecStart=/home/stuffer/BTC_bot/.venv/bin/python /home/stuffer/BTC_bot/bit.py
+
+[Install]
+WantedBy=multi-user.target
